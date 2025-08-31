@@ -11,7 +11,7 @@
     --deep-blue: #1E3A8A;
     --sand: #F5DEB3;
     --cream: #FDF5E6;
-    --dark-brown: #8B4513;
+    --dark-brown: #1c85f6;
     --accent-red: #CD5C5C;
     --text-dark: #2D3748;
     --text-light: #4A5568;
@@ -42,13 +42,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     text-shadow: 2px 2px 4px var(--shadow);
 }
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 h3 {
@@ -148,14 +148,37 @@ main {
 
 /* Bio section */
 .bio-content {
-    text-align: center;
-    max-width: 800px;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 900px;
     margin: 0 auto;
+    text-align: left;
 }
 
 .bio-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+}
+
+.profile-photo {
+    flex-shrink: 0;
+    order: 2;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-gold);
+    box-shadow: 0 8px 25px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px var(--shadow);
 }
 
 /* Work grid */
@@ -257,7 +280,7 @@ main {
 
 /* Contact section */
 .contact-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -268,14 +291,18 @@ main {
     margin-bottom: 3rem;
 }
 
+
 .contact-item {
     display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-    background: var(--white);
+    background: var(--white); 
     border-radius: 8px;
     box-shadow: 0 2px 10px var(--shadow);
+    min-width: 200px;
+    flex: 1;
+    max-width: 300px;
 }
 
 .contact-item i {
@@ -289,30 +316,31 @@ main {
 
 /* Page header - Fixed to eliminate beige rectangle */
 .page-header {
-    background: linear-gradient(135deg, var(--deep-blue) 0%, var(--dark-brown) 100%);
-    color: var(--white);
-    padding: 4rem 10rem;
+    background: linear-gradient(130deg, var(--deep-blue) 0%, var(--dark-brown) 100%);
+    /*color: var(--white);*/
+    padding: 4rem 5rem 4rem 5rem;
     text-align: center;
     margin: 0;
+    margin-top: -20px !important;
     width: 100%;
-    position: relative;
+   /* position: relative;*/
 }
 
 .page-title {
     color: var(--white);
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .page-subtitle {
     color: var(--sand);
-    font-size: 1.2rem;
+    font-size: 0rem;
 }
 
 /* Learning items */
 .learning-content {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 3rem;
+    grid-template-columns: 250px 2fr;
+    gap:2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -352,7 +380,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .learning-category {
@@ -427,7 +455,7 @@ main {
 }
 
 .publication-journal {
-    color: var(--primary-gold);
+    color: var(--accent-blue);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -440,7 +468,7 @@ main {
 .publication-links {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
 }
 
 /* Buttons */
@@ -456,12 +484,12 @@ main {
 }
 
 .btn-primary {
-    background: var(--primary-gold);
+    background: var(--accent-blue);
     color: var(--white);
 }
 
 .btn-primary:hover {
-    background: var(--secondary-gold);
+    background: var(--medium-blue);
     transform: translateY(-2px);
 }
 
@@ -471,13 +499,13 @@ main {
 }
 
 .btn-secondary:hover {
-    background: var(--dark-brown);
+    background: var(--dark-blue);
     transform: translateY(-2px);
 }
 
 /* Footer */
 .footer {
-    background: var(--deep-blue);
+    background: var(--dark-blue);
     color: var(--white);
     text-align: center;
     padding: 2rem 0;
@@ -498,7 +526,7 @@ main {
         width: 100%;
         background: var(--deep-blue);
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 0rem 0;
         text-align: center;
     }
     
@@ -506,6 +534,16 @@ main {
         display: flex;
     }
     
+    .bio-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .profile-photo {
+        order: 1;
+    }
+
     .learning-content {
         grid-template-columns: 1fr;
         padding: 0 20px;
