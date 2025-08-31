@@ -23,11 +23,6 @@ A beautiful, responsive personal website with an Egyptian-inspired design theme.
 - **Publication Stats**: Track your academic output
 - **Professional Layout**: Suitable for academic profiles
 
-### Recipes Page
-- **Culinary Collection**: Share your favorite recipes
-- **Cuisine Categories**: Organize by regional styles
-- **Difficulty & Time Filters**: Help users find suitable recipes
-- **Detailed Recipe Modal**: Complete cooking instructions
 
 ## 🎨 Design Features
 
@@ -42,8 +37,9 @@ A beautiful, responsive personal website with an Egyptian-inspired design theme.
 
 ### Prerequisites
 - A modern web browser
-- Basic knowledge of HTML/CSS (for customization)
+- Basic knowledge of Markdown (much easier than HTML!)
 - GitHub account (for hosting)
+- Ruby (for local Jekyll development, optional)
 
 ### Installation
 
@@ -59,6 +55,17 @@ A beautiful, responsive personal website with an Egyptian-inspired design theme.
 2. **Upload Files**: Add all website files to the repository
 3. **Enable Pages**: Go to Settings > Pages, select source branch
 4. **Access**: Your site will be available at `https://yourusername.github.io`
+
+## ✨ Why Markdown?
+
+The website has been refactored to use **Markdown** instead of HTML, making it:
+
+- **Easier to write**: Simple syntax like `# Headers` and `**bold text**`
+- **Faster to update**: No need to deal with HTML tags
+- **Better for content**: Focus on what you write, not how it looks
+- **Version control friendly**: Easy to track changes in Git
+- **Portable**: Markdown works everywhere
+- **Professional**: Perfect for academic and technical content
 
 ## 📝 Customization Guide
 
@@ -97,48 +104,67 @@ A beautiful, responsive personal website with an Egyptian-inspired design theme.
 
 ### Content Updates
 
-#### Add New Learning Posts (`stuff-i-learned.html`)
-```html
-<article class="learning-card" data-category="[category]">
-    <div class="learning-header">
-        <span class="learning-category [category]">[Category Name]</span>
-        <span class="learning-date">[Date]</span>
-    </div>
-    <h3>[Your Title]</h3>
-    <p>[Your content description]</p>
-    <!-- Add tags and other content -->
-</article>
-```
+#### Add New Learning Posts (`_learnings/your-post.md`)
+```markdown
+---
+layout: learning
+title: "Your Learning Title"
+date: 2024-12-15
+category: tech
+tags: [tag1, tag2, tag3]
+excerpt: "Brief description of what you learned"
+---
 
-#### Add New Publications (`publications.html`)
-```html
-<article class="publication-item" data-category="[type]" data-year="[year]">
-    <div class="publication-header">
-        <span class="publication-type [type]">[Publication Type]</span>
-        <span class="publication-year">[Year]</span>
-    </div>
-    <h3>[Publication Title]</h3>
-    <p class="publication-authors">[Author Names]</p>
-    <!-- Add journal info, abstract, etc. -->
-</article>
-```
+# Your Learning Title
 
-#### Add New Recipes (`recipes.html`)
-```html
-<article class="recipe-card" data-cuisine="[cuisine]" data-difficulty="[level]" data-time="[time]">
-    <div class="recipe-image">
-        <div class="recipe-placeholder">
-            <i class="fas fa-utensils"></i>
-        </div>
-        <span class="recipe-cuisine [cuisine]">[Cuisine Name]</span>
-    </div>
-    <div class="recipe-content">
-        <h3>[Recipe Title]</h3>
-        <p class="recipe-description">[Recipe description]</p>
-        <!-- Add cooking time, difficulty, etc. -->
-    </div>
-</article>
+*Posted on December 15, 2024*
+
+Your content here in **Markdown** format. Much easier than HTML!
+
+## What I Learned
+
+- Point 1
+- Point 2
+- Point 3
+
+## Key Takeaways
+
+1. **Important lesson**
+2. **Another insight**
+3. **Final thought**
 ```
+#### Add New Publications (`_publications/your-paper.md`)
+```markdown
+---
+layout: publication
+title: "Your Publication Title"
+date: 2024-12-15
+type: journal
+journal: "Journal Name"
+volume: 15
+issue: 3
+pages: "245-267"
+doi: "10.1000/example.doi"
+authors: ["Your Name", "Co-author Name"]
+abstract: "Your abstract here"
+tags: [tag1, tag2, tag3]
+pdf_url: "/papers/your-paper.pdf"
+code_url: "https://github.com/yourusername/your-repo"
+citation_count: 0
+view_count: 0
+---
+
+# Your Publication Title
+
+## Abstract
+
+Your abstract content...
+
+## Introduction
+
+Your introduction...
+
+## Methodology
 
 ### Styling Customization
 
@@ -167,22 +193,34 @@ To change fonts, update the Google Fonts link in the HTML head section.
 ### File Structure
 ```
 carole.github.io/
-├── index.html              # Homepage
-├── stuff-i-learned.html    # Learning blog
-├── publications.html       # Academic publications
-├── recipes.html            # Recipe collection
+├── _config.yml             # Jekyll configuration
+├── _layouts/               # Jekyll layouts
+│   ├── default.html        # Main layout template
+│   ├── learning.html       # Learning post layout
+│   ├── publication.html    # Publication layout
+│   └── recipe.html         # Recipe layout
+├── _learnings/             # Learning posts (Markdown)
+│   └── machine-learning-basics.md
+├── _publications/          # Publication posts (Markdown)
+│   └── machine-learning-data-analysis.md
+├── index.md                # Homepage (Markdown)
+├── stuff-i-learned.md      # Learning page (Markdown)
+├── publications.md         # Publications page (Markdown)
 ├── styles.css              # Main stylesheet
 ├── script.js               # JavaScript functionality
+├── Gemfile                 # Ruby dependencies
 ├── LICENSE                 # License file
 └── README.md               # This file
 ```
-
 ### Technologies Used
+- **Jekyll**: Static site generator for easy content management
+- **Markdown**: Simple content authoring and editing
 - **HTML5**: Semantic markup and structure
 - **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
 - **JavaScript (ES6+)**: Interactive functionality and animations
 - **Font Awesome**: Icon library for visual elements
 - **Google Fonts**: Typography system
+- **Ruby**: Backend for Jekyll processing
 
 ### Browser Support
 - Chrome (latest)
