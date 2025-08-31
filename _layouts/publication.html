@@ -1,0 +1,155 @@
+---
+layout: default
+---
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">
+            <i class="fas fa-book-open"></i>
+            {{ page.title }}
+        </h1>
+        <div class="publication-meta">
+            <span class="publication-type {{ page.type }}">{{ page.type | capitalize }}</span>
+            <span class="publication-date">{{ page.date | date: "%B %Y" }}</span>
+        </div>
+        <div class="publication-journal-info">
+            <p><strong>{{ page.journal }}</strong></p>
+            {% if page.volume and page.issue %}
+                <p>Volume {{ page.volume }}, Issue {{ page.issue }}</p>
+            {% endif %}
+            {% if page.pages %}
+                <p>Pages {{ page.pages }}</p>
+            {% endif %}
+        </div>
+        <div class="publication-authors">
+            <p><strong>Authors:</strong> {{ page.authors | join: ", " }}</p>
+        </div>
+        <div class="publication-tags">
+            {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="publication-content">
+            <article class="publication-post">
+                <div class="publication-abstract">
+                    <h3>Abstract</h3>
+                    <p>{{ page.abstract }}</p>
+                </div>
+                
+                <div class="publication-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-quote-left"></i>
+                        <span>{{ page.citation_count }} citations</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-eye"></i>
+                        <span>{{ page.view_count }} views</span>
+                    </div>
+                    {% if page.doi %}
+                    <div class="stat-item">
+                        <i class="fas fa-link"></i>
+                        <span>DOI: {{ page.doi }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="publication-body">
+                    {{ content }}
+                </div>
+                
+                <div class="publication-footer">
+                    <div class="publication-links">
+                        {% if page.pdf_url %}
+                        <a href="{{ page.pdf_url }}" class="btn-secondary" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        {% endif %}
+                        {% if page.code_url %}
+                        <a href="{{ page.code_url }}" class="btn-secondary" target="_blank">
+                            <i class="fas fa-code"></i> View Code
+                        </a>
+                        {% endif %}
+                        <a href="https://scholar.google.com/scholar?q={{ page.title | url_encode }}" class="btn-secondary" target="_blank">
+                            <i class="fas fa-search"></i> Google Scholar
+                        </a>
+                    </div>
+                    
+                    <div class="publication-navigation">
+                        {% if page.previous.url %}
+                            <a href="{{ page.previous.url }}" class="btn-secondary">
+                                <i class="fas fa-arrow-left"></i>
+                                Previous: {{ page.previous.title }}
+                            </a>
+                        {% endif %}
+                        
+                        {% if page.next.url %}
+                            <a href="{{ page.next.url }}" class="btn-secondary">
+                                {{ page.next.title }}
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="publication-share">
+                        <h4>Share this publication:</h4>
+                        <div class="share-buttons">
+                            <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" class="btn-secondary" target="_blank">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" class="btn-secondary" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url }}" class="btn-secondary">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <aside class="publication-sidebar">
+                <div class="related-publications">
+                    <h3>Related Publications</h3>
+                    <ul>
+                        {% assign related = site.publications | where_exp: "post", "post.type == page.type" | where_exp: "post", "post.url != page.url" | limit: 5 %}
+                        {% for post in related %}
+                            <li>
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                                <small>{{ post.type | capitalize }} • {{ post.date | date: "%Y" }}</small>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <div class="publication-archive">
+                    <h3>Browse by Type</h3>
+                    <ul>
+                        {% assign types = site.publications | map: "type" | uniq | sort %}
+                        {% for type in types %}
+                            <li>
+                                <a href="/publications/#{{ type }}">{{ type | capitalize }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <div class="year-archive">
+                    <h3>Browse by Year</h3>
+                    <ul>
+                        {% assign years = site.publications | map: "date" | map: "date: '%Y'" | uniq | sort | reverse %}
+                        {% for year in years %}
+                            <li>
+                                <a href="/publications/#{{ year }}">{{ year }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
