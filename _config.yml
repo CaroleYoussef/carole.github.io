@@ -1,0 +1,57 @@
+# Site settings
+title: "Carole Youssef"
+description: "Personal website showcasing bio, CV, current work, learnings, publications, and recipes"
+author: "Carole Youssef"
+email: "your.email@example.com"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://caroleyoussef.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  learnings:
+    output: true
+    permalink: /stuff-i-learned/:title/
+  publications:
+    output: true
+    permalink: /publications/:title/
+  recipes:
+    output: true
+    permalink: /recipes/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "learnings"
+    values:
+      layout: "learning"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+  - scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
