@@ -11,6 +11,9 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
             About Me
         </h2>
         <div class="bio-content">
+            <div class="profile-photo">
+                <img src="/assets/images/coucou_being_hot.jpeg" alt="Coucou in Corsica"/>
+            </div>
             <div class="bio-text">
                 <p>Hello! I'm Carole, a passionate individual with diverse interests spanning technology, research, and culinary arts. I believe in continuous learning and sharing knowledge with others.</p>
                 <p>When I'm not working on exciting projects, you can find me experimenting in the kitchen, diving into new research topics, or exploring the latest developments in my field.</p>

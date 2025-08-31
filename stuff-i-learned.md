@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Stuff I Learned
-description: Knowledge is power, and sharing it makes us all stronger
 ---
 
 <section class="page-header">
