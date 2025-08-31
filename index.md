@@ -4,25 +4,6 @@ title: Home
 description: Welcome to Carole's personal website - exploring, learning, and creating
 ---
 
-<section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1>Welcome to My World</h1>
-            <p class="hero-subtitle">Exploring, Learning, Creating</p>
-            <div class="egyptian-ornament">
-                <i class="fas fa-ankh"></i>
-                <i class="fas fa-scarab"></i>
-                <i class="fas fa-eye-of-horus"></i>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="profile-placeholder">
-                <i class="fas fa-user-circle"></i>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="bio" class="section">
     <div class="container">
         <h2 class="section-title">
@@ -33,24 +14,6 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
             <div class="bio-text">
                 <p>Hello! I'm Carole, a passionate individual with diverse interests spanning technology, research, and culinary arts. I believe in continuous learning and sharing knowledge with others.</p>
                 <p>When I'm not working on exciting projects, you can find me experimenting in the kitchen, diving into new research topics, or exploring the latest developments in my field.</p>
-                <div class="egyptian-border"></div>
-            </div>
-            <div class="bio-stats">
-                <div class="stat-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Education</h3>
-                    <p>Your degree here</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Experience</h3>
-                    <p>Your experience here</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <p>Your location here</p>
-                </div>
             </div>
         </div>
     </div>
@@ -67,8 +30,8 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
                 <div class="work-icon">
                     <i class="fas fa-code"></i>
                 </div>
-                <h3>Project 1</h3>
-                <p>Description of your current project or work focus.</p>
+                <h3>Web Development</h3>
+                <p>Building modern, accessible websites and web applications with current best practices.</p>
                 <div class="work-tags">
                     <span class="tag">Technology</span>
                     <span class="tag">Innovation</span>
@@ -79,7 +42,7 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
                     <i class="fas fa-flask"></i>
                 </div>
                 <h3>Research</h3>
-                <p>Current research interests and ongoing studies.</p>
+                <p>Exploring machine learning applications and data analysis techniques.</p>
                 <div class="work-tags">
                     <span class="tag">Research</span>
                     <span class="tag">Analysis</span>
@@ -89,11 +52,11 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
                 <div class="work-icon">
                     <i class="fas fa-lightbulb"></i>
                 </div>
-                <h3>Innovation</h3>
-                <p>Creative projects and innovative ideas you're developing.</p>
+                <h3>Learning</h3>
+                <p>Documenting my learning journey and sharing insights with the community.</p>
                 <div class="work-tags">
                     <span class="tag">Creative</span>
-                    <span class="tag">Design</span>
+                    <span class="tag">Education</span>
                 </div>
             </div>
         </div>
@@ -112,9 +75,9 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
                 <div class="cv-item">
                     <div class="cv-year">2020 - 2024</div>
                     <div class="cv-details">
-                        <h4>Degree Name</h4>
+                        <h4>Computer Science Degree</h4>
                         <p>University Name</p>
-                        <p>Relevant coursework and achievements</p>
+                        <p>Focus on software engineering and data science</p>
                     </div>
                 </div>
             </div>
@@ -124,9 +87,9 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
                 <div class="cv-item">
                     <div class="cv-year">2023 - Present</div>
                     <div class="cv-details">
-                        <h4>Job Title</h4>
+                        <h4>Software Developer</h4>
                         <p>Company Name</p>
-                        <p>Key responsibilities and achievements</p>
+                        <p>Full-stack development and machine learning applications</p>
                     </div>
                 </div>
             </div>
@@ -137,9 +100,9 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
                     <div class="skill-category">
                         <h4>Technical Skills</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">Skill 1</span>
-                            <span class="skill-tag">Skill 2</span>
-                            <span class="skill-tag">Skill 3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -175,41 +138,16 @@ description: Welcome to Carole's personal website - exploring, learning, and cre
                     <i class="fab fa-linkedin"></i>
                     <div>
                         <h3>LinkedIn</h3>
-                        <p>linkedin.com/in/yourprofile</p>
+                        <p>linkedin.com/in/carole-ibrahim</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
                     <div>
                         <h3>GitHub</h3>
-                        <p>github.com/yourusername</p>
+                        <p>github.com/caroleyoussef</p>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-twitter"></i>
-                    <div>
-                        <h3>Twitter</h3>
-                        <p>@yourusername</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <h3>Send me a message</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                </form>
             </div>
         </div>
     </div>

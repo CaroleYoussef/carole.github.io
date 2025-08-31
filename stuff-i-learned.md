@@ -10,12 +10,6 @@ description: Knowledge is power, and sharing it makes us all stronger
             <i class="fas fa-lightbulb"></i>
             Stuff I Learned
         </h1>
-        <p class="page-subtitle">Knowledge is power, and sharing it makes us all stronger</p>
-        <div class="egyptian-ornament">
-            <i class="fas fa-scarab"></i>
-            <i class="fas fa-ankh"></i>
-            <i class="fas fa-eye-of-horus"></i>
-        </div>
     </div>
 </section>
 
@@ -23,27 +17,33 @@ description: Knowledge is power, and sharing it makes us all stronger
     <div class="container">
         <div class="learning-content">
             <div class="learning-sidebar">
-                <div class="search-box">
-                    <input type="text" id="learning-search" placeholder="Search learnings...">
-                    <i class="fas fa-search"></i>
-                </div>
-                
                 <div class="category-filter">
-                    <h3>Categories</h3>
-                    <ul class="category-list">
-                        <li><a href="#" class="category-link active" data-category="all">All Topics</a></li>
-                        <li><a href="#" class="category-link" data-category="tech">Technology</a></li>
-                        <li><a href="#" class="category-link" data-category="science">Science</a></li>
-                        <li><a href="#" class="category-link" data-category="life">Life Lessons</a></li>
-                        <li><a href="#" class="category-link" data-category="books">Books</a></li>
-                        <li><a href="#" class="category-link" data-category="travel">Travel</a></li>
-                    </ul>
+                    <h3>Filter by Category</h3>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="all" checked> All Topics
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="tech" checked> Technology
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="science" checked> Science
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="life" checked> Life Lessons
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="books" checked> Books
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="travel" checked> Travel
+                        </label>
+                    </div>
                 </div>
             </div>
-
             <div class="learning-main">
-                <div class="learning-grid">
-                    <article class="learning-card" data-category="tech">
+                <div class="learning-list">
+                    <article class="learning-item" data-category="tech">
                         <div class="learning-header">
                             <span class="learning-category tech">Technology</span>
                             <span class="learning-date">Dec 15, 2024</span>
@@ -56,125 +56,9 @@ description: Knowledge is power, and sharing it makes us all stronger
                             <span class="tag">Data Science</span>
                         </div>
                         <div class="learning-footer">
-                            <button class="btn-secondary">Read More</button>
-                            <div class="learning-stats">
-                                <span><i class="fas fa-eye"></i> 45</span>
-                                <span><i class="fas fa-heart"></i> 12</span>
-                            </div>
+                            <a href="/stuff-i-learned/machine-learning-basics/" class="btn-secondary">Read More</a>
                         </div>
                     </article>
-
-                    <article class="learning-card" data-category="science">
-                        <div class="learning-header">
-                            <span class="learning-category science">Science</span>
-                            <span class="learning-date">Dec 10, 2024</span>
-                        </div>
-                        <h3>The Fascinating World of Quantum Physics</h3>
-                        <p>Exploring quantum mechanics has completely changed my perspective on reality. The concept of superposition and entanglement is mind-bending!</p>
-                        <div class="learning-tags">
-                            <span class="tag">Physics</span>
-                            <span class="tag">Quantum</span>
-                            <span class="tag">Philosophy</span>
-                        </div>
-                        <div class="learning-footer">
-                            <button class="btn-secondary">Read More</button>
-                            <div class="learning-stats">
-                                <span><i class="fas fa-eye"></i> 78</span>
-                                <span><i class="fas fa-heart"></i> 23</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="learning-card" data-category="life">
-                        <div class="learning-header">
-                            <span class="learning-category life">Life Lessons</span>
-                            <span class="learning-date">Dec 5, 2024</span>
-                        </div>
-                        <h3>Building Better Habits: The Power of Consistency</h3>
-                        <p>After reading Atomic Habits, I've learned that small, consistent actions compound into remarkable results over time.</p>
-                        <div class="learning-tags">
-                            <span class="tag">Productivity</span>
-                            <span class="tag">Habits</span>
-                            <span class="tag">Psychology</span>
-                        </div>
-                        <div class="learning-footer">
-                            <button class="btn-secondary">Read More</button>
-                            <div class="learning-stats">
-                                <span><i class="fas fa-eye"></i> 156</span>
-                                <span><i class="fas fa-heart"></i> 34</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="learning-card" data-category="books">
-                        <div class="learning-header">
-                            <span class="learning-category books">Books</span>
-                            <span class="learning-date">Nov 28, 2024</span>
-                        </div>
-                        <h3>Lessons from "Sapiens: A Brief History of Humankind"</h3>
-                        <p>Yuval Noah Harari's perspective on human evolution and the cognitive revolution has given me a new appreciation for our species' journey.</p>
-                        <div class="learning-tags">
-                            <span class="tag">History</span>
-                            <span class="tag">Anthropology</span>
-                            <span class="tag">Evolution</span>
-                        </div>
-                        <div class="learning-footer">
-                            <button class="btn-secondary">Read More</button>
-                            <div class="learning-stats">
-                                <span><i class="fas fa-eye"></i> 89</span>
-                                <span><i class="fas fa-heart"></i> 28</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="learning-card" data-category="travel">
-                        <div class="learning-header">
-                            <span class="learning-category travel">Travel</span>
-                            <span class="learning-date">Nov 20, 2024</span>
-                        </div>
-                        <h3>Cultural Immersion: Learning Through Travel</h3>
-                        <p>My recent trip to Egypt taught me that the best way to understand a culture is to immerse yourself in it completely.</p>
-                        <div class="learning-tags">
-                            <span class="tag">Culture</span>
-                            <span class="tag">Egypt</span>
-                            <span class="tag">Adventure</span>
-                        </div>
-                        <div class="learning-footer">
-                            <button class="btn-secondary">Read More</button>
-                            <div class="learning-stats">
-                                <span><i class="fas fa-eye"></i> 203</span>
-                                <span><i class="fas fa-heart"></i> 67</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="learning-card" data-category="tech">
-                        <div class="learning-header">
-                            <span class="learning-category tech">Technology</span>
-                            <span class="learning-date">Nov 15, 2024</span>
-                        </div>
-                        <h3>Web Development Best Practices in 2024</h3>
-                        <p>Modern web development has evolved significantly. Here are the key practices I've learned for building fast, accessible, and maintainable websites.</p>
-                        <div class="learning-tags">
-                            <span class="tag">Web Dev</span>
-                            <span class="tag">Frontend</span>
-                            <span class="tag">Performance</span>
-                        </div>
-                        <div class="learning-footer">
-                            <button class="btn-secondary">Read More</button>
-                            <div class="learning-stats">
-                                <span><i class="fas fa-eye"></i> 134</span>
-                                <span class="fas fa-heart"></i> 41</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="load-more">
-                    <button class="btn-primary">
-                        <i class="fas fa-plus"></i>
-                        Load More Learnings
-                    </button>
                 </div>
             </div>
         </div>
